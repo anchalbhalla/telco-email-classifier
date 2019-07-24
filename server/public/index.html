@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Telco E-Mail Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Watson Natural Language Classifier for E-mail Spam" />
+    <link rel = "icon" type = "image/png" href = "/telco.png">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/watson-bootstrap-dark.css" rel="stylesheet">
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+    <body>
+
+            
+
+        <div class="container">
+                
+            <div class="row header">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                            
+                        <h1><img src = "telco.png" width="100" height="100" >Telco E-Mail Services Classifier
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            Classify email requests into single or multiple classes using <a target="_blank" href="https://www.ibm.com/watson/services/natural-language-classifier/">Watson Natural Language Classifier</a>. Click the drop down to view some examples or enter your own email text and see how its classified.
+                        </p>
+                        <p>   Enter a telco support email such as requesting a new sim card or updating your plan or both !
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <form id="form" role="form">
+                            <div class="input-group classifier-input-form">
+                                <input class="form-control input-lg classify-text" placeholder="Enter text" type="text" autofocus required />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg classify-btn" type="submit">Classify
+                                        <i class="loading fa fa-spinner fa-spin"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-lg dropdown-toggle examples-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu search-dropdown-menu">
+                                            <li>
+                                                <a href="#">Hello  Requesting you to cancel Mobile No. 5255255224 with immediate effect. Kindly note that we are aware of the exit charges of AED 525   on the data roaming package and approve paying this in the current month bill that will be generated. Please confirm once the needful has been done. </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"> Dear   Please arrange to disconnect the below numbers with immediate effect. Please let us know of any outstanding amount on this number to enable settlement. Please cross check whether below GSMs are under BANK s name and then arrange to disconnect the same with immediate effect. and can you please confirm once SIM disconnected. 5255441425 </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Dear Sir Madam  We would like to request for a new simcard under TelcoCompany Party ID 55551525 and please link to CUG 255 . Package would be Business First 455 51 months local.  And on my other number Dear   Please cease 5255222544 as its longer required. </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Dear Team Please activate as below Blank SIM No and send Mobil No. 4552445545245551122 PARTY ID   45455444 PARTY NAME   HENKEL JEBEL ALI BRANCH  DSOA PLAN  124 4GB Roaming data for freeBU 455 Standard515 Local@12 AED 25 IDD@AED   52 25 IDD@AED   4 425 IDD@AED   4 4GB @AED   4 4GB @AED   4 CUG HARD CAP Block UBT Credit Transfer      activate Usage limit No Limit Approval ref    44541 RPSMOOTHBM   Smooth Voice Roaming Tariff Special Daily Data Roaming   Activate AED   42RP4551Email    fatih.dagasan@henkel.com  additionally Dear Atten  Kindly replace the following Sim cards under hadeed name   525252514452525145555252515524 </a>
+                                            </li>
+                                         </ul>
+                                    </div>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row answers">
+                <div class="col-lg-12">
+                    <div class="well">
+                        <h1 class="answer" ></h1>
+                        <p class="confidence"></p>
+                    </div>
+                </div>
+            </div> 
+            <img src="support.jfif" width="120" height="150">
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="javascripts/index.js"></script>
+    </body>
