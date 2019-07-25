@@ -3,7 +3,7 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: nlc-email-phishing
+  name: nlc-telco-email
   disk_quota: 1024M
   env:
     CLASSIFIER_ID: placeholder

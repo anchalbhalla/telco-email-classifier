@@ -27,9 +27,9 @@ const NaturalLanguageClassifierV1 = require('watson-developer-cloud/natural-lang
 
 
 // const NLC = require('watson-developer-cloud/natural-language-classifier/v1');
-var classifierId = '2ef5ecx559-nlc-551'
-var uname = process.env.NATURAL_LANGUAGE_CLASSIFIER_USERNAME
-var pword = process.env.NATURAL_LANGUAGE_CLASSIFIER_PASSWORD
+var classifierId = process.env.NATURAL_LANGUAGE_CLASSIFIER_ID
+var apikey = process.env.NATURAL_LANGUAGE_CLASSIFIER_API_KEY
+var url = process.env.NATURAL_LANGUAGE_CLASSIFIER_URL
 
 console.log("CLASSIFIER_ID:")
 console.log(classifierId)
@@ -45,8 +45,8 @@ function classify(req, res) {
   // var nlc = new NLC({username: uname, password: pword});
 
   var nlc = new NaturalLanguageClassifierV1({
-    iam_apikey: '5Xq92e-OUEJz8sWDMWlMfgiF1sZP7sf75ob0aEQ8_lQE',
-    url: 'https://gateway.watsonplatform.net/natural-language-classifier/api'
+    iam_apikey: apikey,
+    url: url
   });
 
 

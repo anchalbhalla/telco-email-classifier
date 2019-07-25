@@ -33,7 +33,7 @@
             var top_sample = data.classes[0]  
             var top = "" 
 
-            if (top_sample.class_name === "NewActivation") 
+            if (top_sample.class_name === "New") 
             { 
                 top = "The customer is asking for a new account";
             } 
@@ -48,12 +48,12 @@
                 top = "The customer is asking to delete their account";
             }  
 
-            else if (top_sample.class_name === "NewActivation Update") 
+            else if (top_sample.class_name === "New Update") 
             { 
                 top = "The customer is asking for a new account and updating their services";
             } 
 
-            else if (top_sample.class_name === "NewActivation Delete") 
+            else if (top_sample.class_name === "New Delete") 
             { 
                 top = "The customer is asking for a new account and deleting an account";
             }  
@@ -63,7 +63,7 @@
                 top = "The customer is asking to update services and delete an existing account";
             }
             
-            else if (top_sample.class_name === "NewActivation Update Delete") 
+            else if (top_sample.class_name === "New Update Delete") 
             { 
                 top = "The customer is asking for a new account, updating their services and deleting existing account";
             }
